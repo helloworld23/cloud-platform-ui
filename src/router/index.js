@@ -141,4 +141,17 @@ export const asyncRouterMap = [{
     name: '服务状态监控',
     authority: 'serviceZipkinManager'
   }]
+},
+{
+  path: '/tenantManager',
+  component: Layout,
+  name: '租户服务管理',
+  icon: 'setting',
+  authority: 'tenantManager',
+  children: [{
+    path: 'tenantUserManager',
+    component: _import('tenant/user/index'),
+    name: '租户管理',
+    authority: 'tenantUserManager'
+  }]
 }];
